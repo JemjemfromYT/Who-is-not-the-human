@@ -1,0 +1,681 @@
+body {
+  background-color: black;
+  color: green;
+}
+
+#buttonStart{
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}
+
+#show{
+  display: none;
+}
+
+#loading{
+  opacity: 1;
+  transition: 2s;
+  color: lime;
+  font-size: 20px;
+  font-family: Helvetica;
+  position: absolute;
+  left: 43%;
+  top: 45%;
+  z-index: 1002;
+}
+
+#loading.hide{
+  opacity: 0;
+}
+
+#flagJ{
+  position: absolute;
+  height: 30%;
+  width: 70%;
+  left: 16%;
+  top: 18%;
+  opacity: 0; 
+  transition: 2.5s;
+  pointer-events: none;
+}
+
+#flagJ.show, #devBy.show{
+  opacity: 1;
+  transition: 2.5s;
+}
+
+#flagJ.hide, #devBy.hide{
+  opacity: 0;
+}
+
+#flag{
+  position: absolute;
+  height: 30%;
+  width: 70%;
+  left: 16%;
+  bottom: 18%;
+  opacity: 1; 
+  pointer-events: none;
+}
+
+#devBy{
+  position: absolute;
+  left: 21%;
+  top: 45%;
+  font-family: 'Courier New';
+  color: lime;
+  opacity: 0;
+  font-size: 25px;
+  pointer-events: none;
+}
+
+#take {
+  color: green;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-decoration: none; /* Remove default underline */
+  font-family: monospace;
+  opacity: 0;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  margin: 0;
+  pointer-events: none;
+}
+
+
+
+
+.glitch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.glitch-block {
+  position: absolute;
+  background-color: limegreen; /*  Darker color for better visibility */
+  z-index: 1000;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#tv{
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
+  height: 10px;
+  opacity: 0.1;
+  margin:0;
+  left: 0;
+  z-index:1001;
+}
+#tv2{
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  width: 100%;
+  height: 15px;
+  opacity: 0.1;
+  margin:0;
+  left: 0;
+  z-index: 1001;
+}
+
+
+
+  
+#theCreature {
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 30%;
+  opacity: 0;
+}
+
+#takeALook{
+  position: absolute ;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  pointer-events: none;
+}
+
+
+
+#takeALookText{
+  position: absolute;
+  left: 40%;
+  top: 70%;
+  z-index: 2000;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#JSquadEd {
+  color: cyan;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: fadeIn 3.5s ease-in-out; /* Added animation */
+  text-align: center;
+  pointer-events: none;
+}
+
+@keyframes fadeIn { /* Animation definition */
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#ifYou{
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 30%;
+}
+
+#vomiting{
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 30%;
+}
+
+#vomiting{
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 30%;
+}
+
+#choose1{
+  cursor: pointer;
+}
+
+#which1{
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+}
+
+#human1{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman1{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+  
+}
+
+#heart{
+z-index: 3000;
+display: none;
+}
+
+#which2{
+  text-align: center;
+  display: none;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+}
+
+#human2{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman2{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
+
+#which3{
+  text-align: center;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+  display: none;
+}
+
+#human3{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman3{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
+
+#warn{
+  position: absolute;
+  margin: 0px;
+  top: 10%;
+  color: red;
+  display: none;
+  
+}
+
+
+#which4{
+  text-align: center;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+  display: none;
+}
+
+#human4{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman4{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
+
+#which5{
+  text-align: center;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+  display: none;
+}
+
+#human5{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman5{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
+
+#you{
+  position: absolute;
+  left: 10px;
+  bottom: 26px;
+  color: darkred;
+  display: none;
+}
+
+#warn2{
+  position: absolute;
+  margin: 0px;
+  top: 24%;
+  color: darkred;
+  display: none;
+  pointer-events: none;
+}
+
+#listening{
+  position: relative;
+  text-align: center;
+  top: 20px;
+  color: lime;
+  display: none;
+}
+
+#alive{
+  color: whitesmoke;
+  text-shadow: 0 0 10px #ff0000; /* Red glow */
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  top: 30px;
+  display: none;
+}
+
+#yes{
+  position: absolute;
+  cursor: pointer;
+  right: 25%;
+  color: cyan;
+  display: none;
+  z-index: 5000;
+}
+
+#no{
+  position: absolute;
+  left: 25%;
+  cursor: pointer;
+  color: red;
+  display: none;
+  z-index: 5000;
+}
+
+#alive2{
+  color: whitesmoke;
+  text-shadow: 0 0 10px #ff0000; /* Red glow */
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  top: 30px;
+  display: none;
+}
+
+#yes2{
+  position: absolute;
+  cursor: pointer;
+  right: 25%;
+  color: cyan;
+  display: none;
+  z-index: 5000;
+}
+
+#no2{
+  position: absolute;
+  left: 25%;
+  cursor: pointer;
+  color: red;
+  display: none;
+  z-index: 5000;
+}
+
+
+#which6{
+  text-align: center;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+  display: none;
+}
+
+#human6{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman6{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman6_human6{
+  transition: 14s;
+  opacity: 1;
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3001;
+  pointer-events: none;
+  display: none;
+}
+
+#notHuman6_human6.hide{
+ transition: 6s;
+ opacity: 0;
+  
+}
+
+#people1{
+  position: absolute;
+  height: 30%;
+  width: 80%;
+  right: 38px;
+  top: 40%;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+#who{
+  position: absolute;
+  right: 13%;
+}
+
+#chooseBox1, #chooseBox2, #chooseBox3, #chooseBox4{
+  color: yellow;
+  position: absolute;
+  bottom: 10%;
+  width: 10%;
+  height: 20%
+  
+}
+
+#chooseBox1{
+  left: 10%;
+  z-index: 1000;
+}
+
+
+#chooseBox2{
+  left: 30%;
+  z-index: 1000;
+}
+
+#chooseBox3{
+  left: 53%;
+  z-index: 1000;
+}
+
+#chooseBox4{
+  left: 80%;
+  z-index: 1000;
+}
+
+#chooseNumber1, #chooseNumber2, #chooseNumber3, #chooseNumber4{
+  position: absolute;
+  bottom: 13%;
+  font-size: 30px;
+}
+
+#chooseNumber2{
+  left: 25%;
+}
+
+#chooseNumber3{
+  left: 47%;
+}
+
+#chooseNumber4{
+  left: 71%;
+}
+
+#chooseButton1{
+  position: absolute;
+  left: 45%;
+  bottom: 10%;
+  color: magenta;
+  z-index: 1000;
+  
+}
+
+#showChoose{
+  display: none;
+}
+
+/*
+#passed{
+  position: absolute;
+  color: red;
+  opacity: 1;
+  top: 250px;
+  pointer-events: none;
+  display: none;
+  z-index: 10000;
+  transition: 1s;
+}
+
+#passed.hide{
+  opacity: 0;
+  color: green;
+}
+
+#passed.again{
+  opacity: 1;
+  color: red;
+}
+*/
+
+#passed {
+  position: absolute;
+  color: red;
+  top: 250px;
+  background-color: white;
+  animation: fadeOut 2s ease-out forwards; /* Animation: name, duration, timing function, fill mode */
+  display: none;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+
+#passed2 {
+  position: absolute;
+  color: red;
+  top: 250px;
+  background-color: white;
+  animation: fadeOut2 2s ease-out forwards; /* Animation: name, duration, timing function, fill mode */
+  z-index: 100000;
+  pointer-events: none;
+  display: none;
+}
+
+@keyframes fadeOut2 {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+#passed2.show{
+  opacity: 1;
+}
+
+
+#which7{
+  text-align: center;
+  position: absolute;
+  margin: 30px;
+  text-align: center;
+  top: 10%;
+  display: none;
+}
+
+#human7{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  left: 0%;
+  top: 70%;
+  opacity: 1; 
+  z-index: 5000;
+  cursor: pointer;
+  display: none;
+}
+
+#notHuman7{
+  position: absolute;
+  height: 20%;
+  width: 40%;
+  right: 0;
+  top: 70%;
+  z-index: 3000;
+  cursor: pointer;
+  display: none;
+}
