@@ -45,6 +45,12 @@ let entity = 0;
 let addEntity = document.getElementById ("addEntity")
 let reduceEntity = document.getElementById ("reduceEntity")
 let life = 60;
+let noSignalAudio = document.getElementById ("noSignalAudio")
+let imSorry = document.getElementById ("imSorry")
+
+
+document.addEventListener('DOMContentLoaded', function(){
+//load all the data before the html is loaded
 
 /*
 alert("Cautious: this game might cause you something uncomfort:able because there are some unusual")
@@ -63,7 +69,7 @@ buttonStart.addEventListener("click", function(){
     setTimeout(()=>{
       flagJ.classList.add("hide")
       devBy.classList.add("hide")
-      
+    
 setTimeout(()=>{
 
 
@@ -541,7 +547,14 @@ you.style.display="none"
   console.log(level)
 setTimeout(()=>{
 
-///code
+
+which8.style.display = "block";
+human8.style.display = "block";
+notHuman8.style.display ="block"
+setTimeout(()=>{
+notHuman8_human8.classList.add("show")
+},2000);
+sci.play()
 
 
 },2000);
@@ -549,23 +562,76 @@ sci.play()
 }  
 
 
-notHuman7.addEventListener('click',function(){
-  setTimeout(()=>{
-notHuman7.style.display="block"
-setTimeout(()=>{
-notHuman7.style.display="none"  
-},2500);
-},300)
-})
 
 human7.addEventListener('click',function(){
 setTimeout(()=>{
 human7.style.display="block"
+human7.style.pointerEvents="none";
 setTimeout(()=>{
 human7.style.display="none"  
 },2500);
-},300);
+},100);
 })
+
+
+
+
+
+function incrementLevel8() { 
+click.play();
+imSorry.play();
+imSorry.style.display="block"
+  if(level >= 2){
+   life += 5;
+    heart.textContent = "Heart beat rate: " + life;  
+passed.style.display="block"
+setTimeout(()=>{
+passed.style.display="none"
+},1200);
+  }
+  if(level >= 1){
+which8.style.display = "none";
+human8.style.display = "none";
+notHuman8.style.display = "none";
+notHuman8_human8.style.display="none"
+level = 0;
+noSignal.style.display="block"
+noSignalAudio.play()
+
+you.style.display="none"
+  }
+  if(life >= 70){
+    heartLow.pause()
+    heartMid.play()
+    heart.style.color="red"
+    warn.style.display="block"
+    console.log("no value")
+  }
+  if(life >= 80){
+    heartMid.pause()
+    heartHigh.play()
+    heart.style.color="darkred"
+  }
+  
+  
+  
+  console.log(level)
+setTimeout(()=>{
+
+///code
+noSignal.style.display="none"
+noSignalAudio.pause()
+
+
+},2000);
+setTimeout(()=>{
+document.writeln("SORRY, UNFORTUNATELY I'M LAZY TO CONTINUE THE GAME, I WANNA MAKE THIS GOOD BUT BRUH, I WANNA DO SOMETHING THAN THIS.")
+document.writeln("COMING SOOON")
+body.style.display="none"
+
+},2500);
+sci.play()
+}
 
 
 
@@ -603,6 +669,9 @@ human7.addEventListener("click",()=> incrementLevel7(level+=1));
 notHuman7.addEventListener("click", () => incrementLevel7(level+=2
 ));
 
+human8.addEventListener("click",()=> incrementLevel8(level+=1));
+notHuman8.addEventListener("click", () => incrementLevel8(level+=2
+));
 
 
   },4500);
@@ -659,3 +728,7 @@ let videos = navigator.mediaDevices.getUserMedia({ video: true })
 passed2.textContent = entity + " entity passed";
 heart.textContent = "Heart beat rate: " + life;
 */
+
+
+})
+
