@@ -631,6 +631,18 @@ noSignalAudio.pause()
 setTimeout(()=>{
 document.writeln("SORRY, UNFORTUNATELY I'M LAZY TO CONTINUE THE GAME, I WANNA MAKE THIS GOOD BUT BRUH, I WANNA DO SOMETHING THAN THIS.")
 document.writeln("COMING SOOON")
+document.writeln("")
+document.writeln("")
+document.writeln("J Squad Characters:")
+document.writeln("James")
+document.writeln("Jake")
+document.writeln("Joross")
+document.writeln("Jeb")
+document.writeln("Justin")
+document.writeln("Jeff")
+document.writeln("Jian")
+document.writeln("Jazmine")
+document.writeln("Florence")
 body.style.display="none"
 imSorry.style.display="block"
 },5500);
