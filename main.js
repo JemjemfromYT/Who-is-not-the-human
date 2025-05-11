@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function(){
+//load all the data before the html is loaded
 let buttonStart = document.getElementById ("buttonStart")
 let loading = document.getElementById ("loading")
 let show = document.getElementById ("show")
@@ -49,8 +51,7 @@ let noSignalAudio = document.getElementById ("noSignalAudio")
 let imSorry = document.getElementById ("imSorry")
 
 takeALook.style.opacity="0"
-document.addEventListener('DOMContentLoaded', function(){
-//load all the data before the html is loaded
+
 
 
 alert("Cautious: this game might cause you something uncomfort:able because there are some unusual")
@@ -66,6 +67,7 @@ takeALook.style.opacity="1";
     flagJ.classList.add("show")
     devBy.classList.add("show")
     takeALook.style.opacity="0";
+    takeALook.style.display="none"
     wolf.play()
     setTimeout(()=>{
       flagJ.classList.add("hide")
@@ -126,6 +128,7 @@ setTimeout(()=>{
   takeALook.style.position="absolute";
   takeALook.style.left=" 40%";
   takeALook.style.top="55%";
+  takeALook.style.display="block"
   sci.play()
 takeALookText.addEventListener("click", function(){
   ifYou.style.display="block"
@@ -629,8 +632,8 @@ setTimeout(()=>{
 document.writeln("SORRY, UNFORTUNATELY I'M LAZY TO CONTINUE THE GAME, I WANNA MAKE THIS GOOD BUT BRUH, I WANNA DO SOMETHING THAN THIS.")
 document.writeln("COMING SOOON")
 body.style.display="none"
-
-},2500);
+imSorry.style.display="block"
+},5500);
 sci.play()
 }
 
