@@ -52,10 +52,10 @@ let imSorry = document.getElementById ("imSorry")
 document.addEventListener('DOMContentLoaded', function(){
 //load all the data before the html is loaded
 
-/*
+
 alert("Cautious: this game might cause you something uncomfort:able because there are some unusual")
 alert("please dont take seriously, this is just like a sacrastic")
-*/
+
 
 buttonStart.addEventListener("click", function(){
   show.style.display="block"
