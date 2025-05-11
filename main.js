@@ -48,7 +48,7 @@ let life = 60;
 let noSignalAudio = document.getElementById ("noSignalAudio")
 let imSorry = document.getElementById ("imSorry")
 
-
+takeALook.style.opacity="0"
 document.addEventListener('DOMContentLoaded', function(){
 //load all the data before the html is loaded
 
@@ -58,6 +58,7 @@ alert("please dont take seriously, this is just like a sacrastic")
 
 
 buttonStart.addEventListener("click", function(){
+takeALook.style.opacity="1";
   show.style.display="block"
   intro.style.display="none"
   setTimeout(()=>{
@@ -686,7 +687,7 @@ notHuman8.addEventListener("click", () => incrementLevel8(level+=2
       
     },3000);
   },5000);
-},5000);
+},10000);
 
 })
 
